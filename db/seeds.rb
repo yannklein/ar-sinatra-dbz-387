@@ -4,19 +4,10 @@ url_char = "https://dragon-ball-api.herokuapp.com/api/character"
 
 puts "Begin seeding..."
 
-char_array = JSON.parse(RestClient.get(url_char).body)
+# 1. Get an array with 5 characters data
 
-Character.destroy_all
+# 2. Destroy the previous seeds
 
-char_data = char_array.sample(5)
-
-char_data.each do |character|
-  Character.create!(
-    name: character["name"],
-    origin: character["originPlanet"],
-    image: character["image"],
-  )
-  puts "Character created"
-end
+# 3. Create 5 character instances
 
 puts "Seeding completed!"

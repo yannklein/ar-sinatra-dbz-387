@@ -1,4 +1,4 @@
-class Character < ActiveRecord::Base
-  belongs_to :planet
-  validates :name, presence: true, uniqueness: true
-end
+# Create the Character class!
+# A character has a name, an origin and a picture
+# name should be unique and mandatory
+
